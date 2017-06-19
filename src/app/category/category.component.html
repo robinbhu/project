@@ -1,0 +1,17 @@
+<h1>Add Categories</h1>
+<simple-notifications [options]="options"></simple-notifications>
+<div class="row" style="margin-top: 30px; ">
+	<div class="col-xs-8 col-md-6 col-sm-4 col-md-offset-1 col-sm-offset-1">
+		<form #categoryForm="ngForm" (ngSubmit)="addCategory(categoryForm)">
+			<div class="form-group">
+			<label for="ctName">Category Name</label>
+			<input type="text" ngModel name="ctName" id="ctName" class="form-control" >
+			</div>
+			<div class="form-group">
+			<label for="ctImage">CategoryImage</label>
+			<input type="file" (change)="fileChangeEvent($event)" name="ctImage" id="ctImage" class="form-control" >
+			</div>
+			<button type="submit" class="btn btn-primary">Add Category</button>
+		</form>
+	</div>
+</div>
